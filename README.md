@@ -72,7 +72,3 @@ Aplikasi web untuk pemesanan makanan langsung dari meja pelanggan, dilengkapi de
 
 - Pembayaran dilakukan langsung di kasir/staf, bukan melalui sistem (belum ada integrasi payment gateway)
 - Keranjang belanja sementara disimpan di `localStorage` browser sebelum checkout
-
-## Kontributor
-
-Kelompok 3 — RPL
