@@ -1,0 +1,361 @@
+/* =========================================================
+   CUSTOM.CSS — Override tema hijau elegan untuk Sarab template
+   Jangan edit style.css asli, semua override taruh di sini
+   biar gampang rollback / diganti ulang.
+   ========================================================= */
+
+:root {
+  --primary: #1b4332;      /* hijau tua elegan - ganti dari merah */
+  --primary-light: #2d6a4f;
+  --secondary: #c9a227;    /* emas tipis untuk aksen */
+  --dark: #122019;
+  --green: #1b4332;
+  --cream: #f8f6f1;        /* krem gading sebagai base */
+  --cream2: #f0ead9;
+  --light: #f8f6f1;
+  --shadow: 0 8px 40px rgba(27, 67, 50, 0.12);
+  --shadow-lg: 0 20px 60px rgba(27, 67, 50, 0.18);
+}
+
+body {
+  background-color: var(--cream);
+}
+
+/* ===== TOPBAR ===== */
+#topbar {
+  background: var(--dark) !important;
+}
+
+/* ===== NAVBAR ===== */
+#nav {
+  background: rgba(248, 246, 241, 0.97) !important;
+}
+#nav .nav-link.active,
+#nav .nav-link:hover {
+  color: var(--primary) !important;
+}
+.bico {
+  background: var(--primary) !important;
+}
+.bname span {
+  color: var(--secondary) !important;
+}
+
+/* Tombol merah template -> hijau elegan */
+.btn-red,
+.nav-cta,
+.madd,
+.mpaddcart {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+.btn-red:hover,
+.nav-cta:hover,
+.madd:hover,
+.mpaddcart:hover {
+  background: var(--primary-light) !important;
+}
+
+/* ===== NAVBAR ICONS: LOGIN + CART ===== */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: 10px;
+}
+.nav-icon-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--cream2);
+  color: var(--primary);
+  border: 1px solid rgba(27, 67, 50, 0.15);
+  font-size: 1rem;
+  transition: 0.25s;
+  text-decoration: none;
+}
+.nav-icon-btn:hover {
+  background: var(--primary);
+  color: #fff;
+}
+.nav-icon-btn .cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--secondary);
+  color: #1a1a1a;
+  font-size: 0.65rem;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+/* ===== CATEGORY CARDS ===== */
+.catcard.active,
+.catcard:hover {
+  border-color: var(--primary) !important;
+}
+.catcard.active .catnm,
+.catcard:hover .catnm {
+  color: var(--primary) !important;
+}
+
+/* ===== MENU FILTER BUTTONS ===== */
+.filtbtn.active,
+.filtbtn:hover {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: #fff !important;
+}
+
+/* ===== MENU CARD PRICE / BADGE ===== */
+.mprice {
+  color: var(--primary) !important;
+}
+.mbdg {
+  background: var(--secondary) !important;
+  color: #1a1a1a !important;
+}
+.mbdg.hot {
+  background: var(--primary) !important;
+  color: #fff !important;
+}
+.mcat {
+  color: var(--secondary) !important;
+}
+
+/* ===== SECTION LABELS ===== */
+.slbl {
+  color: var(--secondary) !important;
+}
+.stitle span {
+  color: var(--primary) !important;
+}
+.sline {
+  background: var(--secondary) !important;
+}
+
+/* ===== HOURS SECTION BG ===== */
+#hours,
+.hrsbg {
+  background: linear-gradient(135deg, var(--dark), var(--primary)) !important;
+}
+.hrscta {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+.hdot.on {
+  background: #6fcf97 !important;
+}
+
+/* ===== CHECKOUT PAGE ===== */
+.checkout-wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 140px 16px 80px;
+}
+.checkout-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 28px;
+  margin-bottom: 20px;
+}
+.checkout-card h5 {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.cart-item-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+.cart-item-row img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.cart-item-info {
+  flex: 1;
+}
+.cart-item-info .nm {
+  font-weight: 600;
+  color: #222;
+}
+.cart-item-info .pr {
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+.qty-ctrl {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.qty-ctrl button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  background: #fff;
+  color: var(--primary);
+}
+.empty-cart {
+  text-align: center;
+  padding: 50px 20px;
+  color: #888;
+}
+.checkout-form .form-label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+.checkout-form .form-control {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 10px 14px;
+}
+.checkout-form .form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(27, 67, 50, 0.12);
+}
+.checkout-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  padding-top: 12px;
+}
+.btn-checkout {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.btn-checkout:hover {
+  background: var(--primary-light);
+  color: #fff;
+}
+.back-to-menu {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 18px;
+}
+
+/* ===== AUTH MODAL ===== */
+#authOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(18,32,25,0.6);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+#authOverlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.auth-modal {
+  background: #fff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  padding: 32px 28px 24px;
+  position: relative;
+  box-shadow: 0 24px 80px rgba(18,32,25,0.22);
+  transform: translateY(20px);
+  transition: transform 0.28s cubic-bezier(.34,1.4,.64,1);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+#authOverlay.open .auth-modal {
+  transform: translateY(0);
+}
+.auth-close {
+  position: absolute;
+  top: 12px; right: 14px;
+  background: var(--cream2);
+  border: none;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  color: var(--primary);
+  cursor: pointer;
+}
+.auth-close:hover { background: var(--primary); color: #fff; }
+.auth-panel { display: none; flex-direction: column; gap: 14px; }
+.auth-panel.active { display: flex; }
+.auth-logo {
+  width: 48px; height: 48px;
+  background: var(--primary);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 1.2rem;
+}
+.auth-title { font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--dark); margin:0; }
+.auth-sub { font-size:.83rem; color:#888; margin:0; }
+.auth-field { display:flex; flex-direction:column; gap:5px; }
+.auth-field label { font-size:.82rem; font-weight:600; color:#444; }
+.auth-field input {
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  padding: 10px 13px;
+  font-size:.9rem;
+  outline: none;
+  width: 100%;
+  transition: border-color .2s;
+}
+.auth-field input:focus { border-color: var(--primary); }
+.auth-pass-wrap { position: relative; }
+.auth-pass-wrap input { padding-right: 38px; }
+.auth-eye {
+  position: absolute;
+  right: 10px; top: 50%;
+  transform: translateY(-50%);
+  background: none; border: none;
+  color: #aaa; cursor: pointer;
+}
+.auth-eye:hover { color: var(--primary); }
+.auth-btn {
+  background: var(--primary);
+  color: #fff; border: none;
+  border-radius: 11px;
+  padding: 12px;
+  font-weight: 700;
+  font-size: .93rem;
+  cursor: pointer;
+  transition: background .2s;
+}
+.auth-btn:hover { background: var(--primary-light); }
+.auth-msg { font-size:.82rem; text-align:center; min-height:16px; }
+.auth-msg.error { color:#e74c3c; }
+.auth-msg.success { color:#27ae60; }
+.auth-switch { text-align:center; font-size:.84rem; color:#888; margin:0; }
+.auth-switch a { color:var(--primary); font-weight:600; text-decoration:none; }
